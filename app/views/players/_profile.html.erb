@@ -43,6 +43,24 @@
     </div>
   <% end %>
 
+  <%# 類似選手 %>
+  <% if profile['similar_players'].present? %>
+    <div class="mb-10">
+      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">Similar Players</h3>
+      <div class="grid gap-3">
+        <% profile['similar_players'].each do |player| %>
+          <div class="flex items-start gap-3 p-3 rounded bg-neutral-800/50 border border-neutral-700/50">
+            <span class="text-orange-600 mt-0.5 leading-none">&#9670;</span>
+            <div>
+              <span class="text-neutral-200 font-semibold text-sm"><%= player['name'] %></span>
+              <p class="text-neutral-500 text-xs mt-0.5"><%= player['reason'] %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
   <%# タグ %>
   <% if profile['tags'].present? %>
     <div class="mb-10">
