@@ -1,0 +1,13 @@
+<%= render "players/search_form" %>
+
+<% if @error_message %>
+  <%= render "players/error", error_message: @error_message %>
+<% end %>
+
+<% if @profile %>
+  <% if @profile['found'] %>
+    <%= render "players/profile", profile: @profile %>
+  <% else %>
+    <%= render "players/not_found", message: @profile['message'] %>
+  <% end %>
+<% end %>
