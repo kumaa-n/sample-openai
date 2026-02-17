@@ -23,7 +23,7 @@
   <%# プロフィール %>
   <% if profile['formal'].present? %>
     <div class="mb-10">
-      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">Profile</h3>
+      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">プロフィール</h3>
       <p class="text-neutral-300 leading-relaxed whitespace-pre-wrap"><%= profile['formal'] %></p>
     </div>
   <% end %>
@@ -31,7 +31,7 @@
   <%# タイトル・受賞歴 %>
   <% if profile['titles'].present? %>
     <div class="mb-10">
-      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">Titles</h3>
+      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">タイトル・受賞歴</h3>
       <div class="grid gap-2">
         <% profile['titles'].each do |title| %>
           <div class="flex items-start gap-2">
@@ -46,7 +46,7 @@
   <%# 類似選手 %>
   <% if profile['similar_players'].present? %>
     <div class="mb-10">
-      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">Similar Players</h3>
+      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">類似選手</h3>
       <div class="grid gap-3">
         <% profile['similar_players'].each do |player| %>
           <div class="flex items-start gap-3 p-3 rounded bg-neutral-800/50 border border-neutral-700/50">
@@ -64,7 +64,7 @@
   <%# タグ %>
   <% if profile['tags'].present? %>
     <div class="mb-10">
-      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">Tags</h3>
+      <h3 class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">タグ</h3>
       <div class="flex flex-wrap gap-2">
         <% profile['tags'].each do |tag| %>
           <span class="text-xs px-3 py-1 rounded bg-neutral-800 text-neutral-400 border border-neutral-700">#<%= tag %></span>
