@@ -52,7 +52,12 @@
           <div class="flex items-start gap-3 p-3 rounded bg-neutral-800/50 border border-neutral-700/50">
             <span class="text-orange-600 mt-0.5 leading-none">&#9670;</span>
             <div>
-              <span class="text-neutral-200 font-semibold text-sm"><%= player['name'] %></span>
+              <button
+                type="button"
+                class="text-neutral-200 font-semibold text-sm hover:text-orange-400 underline underline-offset-2 transition cursor-pointer"
+                data-player-name="<%= player['name'] %>"
+                onclick="searchSimilarPlayer(this.dataset.playerName)"
+              ><%= player['name'] %></button>
               <p class="text-neutral-500 text-xs mt-0.5"><%= player['reason'] %></p>
             </div>
           </div>
@@ -60,6 +65,16 @@
       </div>
     </div>
   <% end %>
+
+  <script>
+    function searchSimilarPlayer(name) {
+      var form = document.getElementById("player-form");
+      var input = form.querySelector("input[name='player_name']");
+      input.value = name;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      form.requestSubmit();
+    }
+  </script>
 
   <%# タグ %>
   <% if profile['tags'].present? %>
