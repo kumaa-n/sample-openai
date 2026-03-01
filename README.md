@@ -1,4 +1,4 @@
-# Sample OpenAI
+# baseball-player-finder
 
 OpenAI API の動作検証用アプリケーションです。\
 プロ野球選手の名前を入力すると、OpenAI APIを使ってプロフィール情報を表示します。
